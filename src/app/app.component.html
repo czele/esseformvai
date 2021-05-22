@@ -1,10 +1,29 @@
-<form>
+<h1>Cadastro de Cliente:</h1>
 
-  <div>
-  <input type="text">
-</div>
+<form [formGroup]="usuarioForm" (ngSubmit)="onSubmit()">
 
-  <button>
+  <div style='padding: 5px;'>
+    <label>Nome:</label><br>
+    <input type="text" id="nome" formControlName="nome">
+  </div>
+
+  <br>
+
+  <div style='padding: 5px;'>
+    <label>Sobrenome:</label><br>
+    <input type="text" id="sobrenome" formControlName="sobrenome">
+  </div>
+
+  <br>
+
+  <div style='padding: 5px;'>
+    <label>CPF:</label><br>
+    <input type="text" id="cpf" formControlName="cpf">
+  </div>
+
+  <br>
+
+  <button type="submit">
     {{nomeDoBotao}}
   </button>
 
